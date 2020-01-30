@@ -4,10 +4,12 @@
 # file into a variable called `grants` using the `read.csv()`
 # Be sure to set your working directory in RStudio, and do NOT treat strings as 
 # factors!
+grant <-read.csv('data/gates_money.csv', stringsAsFactors = FALSE)
+View(grant)
 
 
 # Use the View function to look at the loaded data
-
+View(grant)
 
 # Create a variable `organization` that contains the `organization` column of 
 # the dataset
@@ -21,7 +23,7 @@
 ## Now you can ask some interesting questions about the dataset
 
 # What was the mean grant value?
-
+mean(grant$total_amount) 
 
 # What was the dollar amount of the largest grant?
 
@@ -30,10 +32,17 @@
 
 
 # Which organization received the largest grant?
+grant[grant$total_amount == max(grant$total_amount), "organization" ]
 
+grant$organization 
 
 # Which organization received the smallest grant?
-
+grant[grant$total_amount == min(grant$total_amount), c("organization", "total_amount")]
+grant$organization
 
 # How many grants were awarded in 2010?
-
+nrow(grant[grant$start_year == "2010", ])
+#How much money was rewarded in 2010?
+total_amount 
+start_year
+sum(grant[grant$start_year=="2010", "total_amount"])
