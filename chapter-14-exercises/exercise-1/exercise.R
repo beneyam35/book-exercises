@@ -7,6 +7,7 @@ library("httr")
 # Create a variable base_uri that stores the base URI (as a string) for the 
 # Github API (https://api.github.com)
 
+base_url <- GET("https://api.github.com")
 
 # Under the "Repositories" category of the API documentation, find the endpoint 
 # that will list _repos in an organization_. Then create a variable named

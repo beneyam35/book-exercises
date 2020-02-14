@@ -1,0 +1,22 @@
+---
+title: "R markdown demo"
+author: "Beneyam"
+date: "2/11/2020"
+output: html_document
+---
+## this my report 
+
+Shorty fine 
+
+```{r example, echo=FALSE}
+numbers <- runif(1:100)
+hist(numbers)
+numbers_mean <- mean(numbers)
+
+img_url <- "![Amazon
+]" "https://www.google.com/search?q=amazon&sxsrf=ACYBGNR8T7HFm-AqxQT2Fxu2wMRMZj6Etg:1581462078047&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj644yrzcrnAhURHDQIHVEIBvUQ_AUoBHoECA4QBg&biw=1440&bih=789#imgrc=rL9FMyI7ewOxtM" 
+
+```
+The mean of the numbers happens to be **`r numbers_mean`.**
+
+`r img_url`
